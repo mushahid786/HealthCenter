@@ -1,0 +1,12 @@
+<?php
+session_start();
+if($_SESSION['user']=='admin')
+{
+	session_destroy();
+	header("location:adminlogin.php");
+}
+else{
+	session_destroy();
+	header("location:userlogin.php");
+}
+?>
